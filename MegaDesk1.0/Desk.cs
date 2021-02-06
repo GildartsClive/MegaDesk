@@ -7,6 +7,15 @@ using System.Threading.Tasks;
 
 namespace MegaDesk1._0
 {
+    public enum DesktopMaterial
+    {
+        Oak,
+        Laminate,
+        Pine,
+        Rosewood,
+        Veneer
+    }
+
     class Desk
     {
         string orderID;

@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
-
 namespace MegaDesk1._0
 {
     public partial class AddQuote : Form
@@ -42,6 +41,20 @@ namespace MegaDesk1._0
         public AddQuote()
         {
             InitializeComponent();
+
+            // Makes the list for the desktop material combo box
+            List<DesktopMaterial> materials = Enum.GetValues(typeof(DesktopMaterial))
+                .Cast<DesktopMaterial>().ToList();
+
+            surfaceMat.DataSource = materials;
+            // sets the index of the combo box to show up blank first
+            surfaceMat.SelectedIndex = -1;
+
+            // Makes the list for the rush order combo box
+            List<RushOrder> rush = Enum.GetValues(typeof(RushOrder)).Cast<RushOrder>().ToList();
+            listRush.DataSource = rush;
+            // sets the index of the combo box to show up blank first
+            listRush.SelectedIndex = -1;
         }
 
         private void Label1_Click(object sender, EventArgs e)
@@ -123,7 +136,19 @@ namespace MegaDesk1._0
                         ", QID: " + account[recordKeep].QuoteID + ", Dimensions: " + account[recordKeep].surfaceArea + ", Material: " + account[recordKeep].material +
                         ", FinalPrice: $" + account[recordKeep].finalPrice;
 
+                    /*
+                    //Declare the Json file and serialize
+                    string jsonWrite = Newtonsoft.Json.JsonConvert.SerializeObject(recordHolder);
+                    string jsonFile = @"quotes.json";
 
+                    if (!File.Exists(jsonFile))
+                    {
+                        using (StreamWriter sw = File.CreateText(jsonFile)) { }
+                    }
+                    using (StreamWriter swa = File.AppendText(jsonFile)) { swa.WriteLine(jsonWrite); }
+                    */
+
+                    
                     //Declare the StreamWriter
                     StreamWriter recordWriter = new StreamWriter("RecordDatabase.text", true);
                     //Write the record to file
@@ -181,6 +206,11 @@ namespace MegaDesk1._0
         private void Label10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddQuote_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

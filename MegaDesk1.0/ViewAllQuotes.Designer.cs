@@ -40,9 +40,10 @@
             this.label1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(255, 9);
+            this.label1.Location = new System.Drawing.Point(340, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(336, 53);
+            this.label1.Size = new System.Drawing.Size(448, 65);
             this.label1.TabIndex = 6;
             this.label1.Text = "Mega Desk View Quotes";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -50,9 +51,10 @@
             // backQuoteButton
             // 
             this.backQuoteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backQuoteButton.Location = new System.Drawing.Point(12, 400);
+            this.backQuoteButton.Location = new System.Drawing.Point(16, 492);
+            this.backQuoteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.backQuoteButton.Name = "backQuoteButton";
-            this.backQuoteButton.Size = new System.Drawing.Size(121, 38);
+            this.backQuoteButton.Size = new System.Drawing.Size(161, 47);
             this.backQuoteButton.TabIndex = 8;
             this.backQuoteButton.Text = "<- Main Menu";
             this.backQuoteButton.UseVisualStyleBackColor = true;
@@ -61,9 +63,10 @@
             // viewQueryButton
             // 
             this.viewQueryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewQueryButton.Location = new System.Drawing.Point(310, 401);
+            this.viewQueryButton.Location = new System.Drawing.Point(413, 494);
+            this.viewQueryButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.viewQueryButton.Name = "viewQueryButton";
-            this.viewQueryButton.Size = new System.Drawing.Size(151, 37);
+            this.viewQueryButton.Size = new System.Drawing.Size(201, 46);
             this.viewQueryButton.TabIndex = 9;
             this.viewQueryButton.Text = "Load Queries";
             this.viewQueryButton.UseVisualStyleBackColor = true;
@@ -72,27 +75,30 @@
             // displayRecords
             // 
             this.displayRecords.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.displayRecords.Location = new System.Drawing.Point(12, 82);
+            this.displayRecords.Location = new System.Drawing.Point(16, 101);
+            this.displayRecords.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.displayRecords.Multiline = true;
             this.displayRecords.Name = "displayRecords";
             this.displayRecords.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.displayRecords.Size = new System.Drawing.Size(810, 282);
+            this.displayRecords.Size = new System.Drawing.Size(1079, 346);
             this.displayRecords.TabIndex = 10;
             this.displayRecords.TextChanged += new System.EventHandler(this.DisplayRecords_TextChanged);
             // 
             // ViewAllQuotes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
-            this.ClientSize = new System.Drawing.Size(834, 450);
+            this.ClientSize = new System.Drawing.Size(1112, 554);
             this.Controls.Add(this.displayRecords);
             this.Controls.Add(this.viewQueryButton);
             this.Controls.Add(this.backQuoteButton);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ViewAllQuotes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewAllQuotes";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ViewAllQuotes_FormClosed);
             this.Load += new System.EventHandler(this.ViewAllQuotes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

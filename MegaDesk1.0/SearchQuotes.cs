@@ -18,6 +18,14 @@ namespace MegaDesk1._0
         public SearchQuotes()
         {
             InitializeComponent();
+
+            // Makes the list for the desktop material combo box
+            List<DesktopMaterial> materials = Enum.GetValues(typeof(DesktopMaterial))
+                .Cast<DesktopMaterial>().ToList();
+
+            searchQuery.DataSource = materials;
+            // sets the index of the combo box to show up blank first
+            searchQuery.SelectedIndex = -1;
         }
 
         private void SubmitSearch_Click(object sender, EventArgs e)
@@ -62,6 +70,11 @@ namespace MegaDesk1._0
         private void SearchQuery_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void SearchQuotes_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

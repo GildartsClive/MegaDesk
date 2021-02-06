@@ -58,5 +58,10 @@ namespace MegaDesk1._0
         {
 
         }
+
+        private void ViewAllQuotes_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -8,6 +8,13 @@ using System.Threading.Tasks;
 
 namespace MegaDesk1._0
 {
+    public enum RushOrder
+    {
+        NoRush,
+        Rush3Days,
+        Rush5Days,
+        Rush7Days
+    }
 
     class DeskQuote
     {

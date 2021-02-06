@@ -16,5 +16,10 @@ namespace MegaDesk1._0
         {
             InitializeComponent();
         }
+
+        private void DisplayQuote_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
